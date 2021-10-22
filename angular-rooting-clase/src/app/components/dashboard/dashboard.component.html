@@ -1,0 +1,16 @@
+<p>dashboard works!</p>
+
+<a routerLink="/login">IR a login</a><br>
+
+<button (click)="goToLogin()">Ir a Login programmatically</button>
+
+<h3>Alumnos</h3>
+<ul>
+    <a [routerLink]="['/student', 1]"><li>Alumno 1</li></a>
+    <a [routerLink]="['/student', 2]"><li>Alumno 2</li></a>
+    <a [routerLink]="['/student', 3]"><li>Alumno 3</li></a>
+</ul>
+
+<ul>
+    <a *ngFor="let alumno of [1,2,3]"[routerLink]="['/student', alumno]"><li>Alumno {{alumno}}</li></a>
+</ul>
